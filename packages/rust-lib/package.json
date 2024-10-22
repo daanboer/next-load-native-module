@@ -1,0 +1,21 @@
+{
+  "name": "rust-lib",
+  "version": "0.1.0",
+  "main": "dist/index.node",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "napi": {
+    "name": "dist/index"
+  },
+  "scripts": {
+    "dev": "pnpm build",
+    "build": "napi build --release --strip --dts dist/index.d.ts",
+    "build:debug": "napi build --dts dist/index.d.ts",
+    "clean": "rm -rf target dist"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^2.18.4"
+  }
+}
