@@ -7,11 +7,11 @@
     "dist"
   ],
   "napi": {
-    "name": "dist/index"
+    "binaryName": "index"
   },
   "scripts": {
     "dev": "pnpm build",
-    "build": "napi build --release --strip --dts dist/index.d.ts",
+    "build": "napi build --release --strip -o dist",
     "build:debug": "napi build --dts dist/index.d.ts",
     "clean": "rm -rf target dist"
   },
